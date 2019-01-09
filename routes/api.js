@@ -1,6 +1,6 @@
 const apiRouter = require('express').Router();
 const { getLyricsCont } = require('../controllers/lyrics.js');
 
-apiRouter.get('/lyricsAnalysis', getLyricsCont);
+apiRouter.get('/analysis', getLyricsCont);
 
 module.exports = apiRouter;
