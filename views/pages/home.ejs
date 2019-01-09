@@ -1,28 +1,39 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Song Analysis Machine</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css"
+    />
+    <script
+      defer
+      src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"
+    ></script>
+  </head>
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Analysis Machine</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css">
-  <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
-</head>
-
-<body>
-  <section class="section">
-    <div class="container">
-      <h1 class="title">
-        Welcome to the Song Analysis Machine........
-      </h1>
-      <form action="/api/analysis">
-        <input class="input" name="q_track" type="text" placeholder="Track....">
-        <input class="input" name="q_artist" type="text" placeholder="Artist....">
-        <input class="button" type="submit" value="Submit">
-      </form>
-
-    </div>
-  </section>
-</body>
-
+  <body>
+    <section class="section">
+      <div class="container">
+        <h1 class="title">Welcome to the Song Analysis Machine........</h1>
+        <form action="/api/analysis">
+          <input
+            class="input"
+            name="q_track"
+            type="text"
+            placeholder="Track...."
+          />
+          <input
+            class="input"
+            name="q_artist"
+            type="text"
+            placeholder="Artist...."
+          />
+          <input class="button" type="submit" value="Submit" />
+        </form>
+      </div>
+    </section>
+  </body>
 </html>

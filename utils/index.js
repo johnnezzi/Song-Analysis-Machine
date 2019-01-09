@@ -1,4 +1,5 @@
-const { version, iam_apikey, musicapi } = require('../config');
+const { version, iam_apikey, musicapi } =
+  process.env.NODE_ENV === 'production' ? process.env : require('../config.js');
 const axios = require('axios');
 
 // class constructor from watson used for request for tone
