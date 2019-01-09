@@ -1,11 +1,13 @@
+const express = require('express');
 const app = require('express')();
 const apiRouter = require('./routes/api.js');
 
-app.set('view engine', 'ejs')
+app.use(express.static(__dirname + '/public'));
 
+app.set('view engine', 'ejs');
 app.get('/', (req, res, next) => {
-  res.status(200).render('pages/home.ejs')
-})
+  res.status(200).render('pages/home.ejs');
+});
 
 app.use('/api', apiRouter);
 

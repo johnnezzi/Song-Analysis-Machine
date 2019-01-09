@@ -8,6 +8,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css"
     />
+    <link rel="stylesheet" type="text/css" href="/css/analyzeStyle.css" />
     <script
       defer
       src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"
@@ -15,14 +16,15 @@
   </head>
   <body>
     <section class="section">
-      <div class="container">
-        <h1 class="title">Your analysis....</h1>
+      <div class="container results">
+        <h1 class="title" title__main>Your analysis....</h1>
         <p>
           <%  tones.forEach((tone)=> {%>
-            The level of <%=tone.tone_name%> is <%=tone.score%>%          
+            <p>The level of <%=tone.tone_name%> is <%=tone.score%>%          </p>
           <p><progress class="progress is-primary" value=<%=tone.score%> max="100"><%=tone.score%>%</progress></p>
         <% })%>        
         </p>
+        <br/>
         <input class="button" type="submit" value="Start again!" onclick="window.location.href='/'">        
       </div>
     </section>

@@ -1,0 +1,22 @@
+body {
+  /* background-color: black; */
+  height: 100vh;
+  background-image: url('../images/jacques-philippe-gollnick-576546-unsplash.jpg');
+  background-size: 1396px 785px;
+}
+
+.title__main {
+  text-align: center;
+  color: whitesmoke;
+  font-size: 40px;
+}
+
+form input {
+  margin-bottom: 10px;
+}
+
+div {
+  color: rgb(255, 255, 255);
+  padding: 18px;
+  opacity: 0.9;
+}
