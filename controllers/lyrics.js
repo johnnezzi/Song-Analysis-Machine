@@ -1,5 +1,5 @@
 const { getLyrics, getAnalysis, toneAnalyzer } = require('../utils/index.js');
-
+//const landingPage =
 exports.getLyricsCont = (req, res, next) => {
   //console.log(req.query);
   getLyrics(req.query.q_track, req.query.q_artist)
