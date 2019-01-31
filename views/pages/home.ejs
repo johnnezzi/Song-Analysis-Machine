@@ -4,36 +4,57 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Song Analysis Machine</title>
-    <link
+    <!-- <link
       href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css"
       rel="stylesheet"
-    />
+    /> -->
+
     <link rel="stylesheet" type="text/css" href="/css/homeStyle.css" />
     <script
       defer
       src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"
     ></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.1.1.min.js"
+      integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
   </head>
   <body>
-    <section class="section">
-      <div class="container">
-        <h1 class="title title__main">Welcome to the Song Analysis Machine</h1>
-        <form action="/api/analysis">
-          <input
-            class="input"
-            name="q_track"
-            type="text"
-            placeholder="Track...."
-          />
-          <input
-            class="input"
-            name="q_artist"
-            type="text"
-            placeholder="Artist...."
-          />
-          <input class="button" type="submit" value="Submit" />
+    <div class="ui container">
+      <div class="ui hidden divider"></div>
+      <h1
+        class="ui center aligned header"
+        style="color:white;text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;"
+      >
+        Welcome to the Song Analysis Machine
+      </h1>
+      <div class="ui hidden divider"></div>
+      <div class="ui centered grid">
+        <form class="ui form twelve wide" action="/api/analysis">
+          <div class="inline fields">
+            <label
+              style="color:white;text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;"
+              >Artist</label
+            >
+            <input type="text" name="q_artist" placeholder="Artist Name" />
+          </div>
+          <div class="inline field">
+            <label
+              style="color:white;text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;"
+              >Track</label
+            >
+            <input type="text" name="q_track" placeholder="Track Name" />
+          </div>
+          <button class="ui blue button" type="submit">Submit</button>
         </form>
       </div>
-    </section>
+    </div>
   </body>
 </html>

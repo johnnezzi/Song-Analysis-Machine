@@ -1,20 +1,12 @@
 body {
-  height: 100vh;
-  background-image: url('../images/burnt-close-up-composition-934067.jpg');
-  background-size: 1396px 785px;
-  background-position: top center;
+  background-image: url('../images/in-store-music.jpg') !important;
+  background-repeat: no-repeat !important;
+  background-position: center top !important;
+  background-size: cover !important;
 }
-
-div {
-  background-color: rgba(192, 192, 192, 0.8);
-  padding: 18px;
-  opacity: 0.9;
-}
-
-.title__main {
-  color: black;
-}
-
-.results p {
-  color: black;
+.my-container {
+  background-color: rgba(255, 255, 255, 0.2) !important;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 20px;
 }

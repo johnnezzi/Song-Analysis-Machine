@@ -4,29 +4,42 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Your analysis</title>   
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css"
-    />
     <link rel="stylesheet" type="text/css" href="/css/analyzeStyle.css" />
     <script
       defer
       src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"
     ></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.1.1.min.js"
+      integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
   </head>
-  <body>
-    <section class="section">
-      <div class="container results">
-        <h1 class="title" title__main>Your analysis....</h1>
-        <p>
-          <%  tones.forEach((tone)=> {%>
-            <p>The level of <%=tone.tone_name%> is <%=tone.score%>%          </p>
-          <p><progress class="progress is-primary" value=<%=tone.score%> max="100"><%=tone.score%>%</progress></p>
-        <% })%>        
-        </p>
+  <body> 
+      <div class="ui container my-container">
+      <div class="ui hidden divider"></div>
+      <h1 style="color:white; text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;" class="ui header">Your analysis....</h1>
+      <div class="ui hidden divider"></div>
+      <%  tones.forEach((tone)=> {%>
+            <div class="ui indicating progress" data-percent=<%=tone.score%> max="100">
+              <!-- <div class="bar" style="transition-duration: 300ms; width: <%=tone.score%>%"></div> -->
+              <div class="bar"><div class="progress"></div></div>
+              <div style="color:white; text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;" class="label">The level of <%=tone.tone_name%> is <%=tone.score%>%</div>
+            </div>
+          <% })%>        
         <br/>
-        <input class="button" type="submit" value="Start again!" onclick="window.location.href='/'">        
+        <input class="ui blue button" type="submit" value="Start again!" onclick="window.location.href='/'">
       </div>
-    </section>
+<script>
+  $(document).ready(function() {
+    $('.progress').progress();
+  });
+</script>
   </body>
 </html>
