@@ -5,7 +5,7 @@ const apiRouter = require('./routes/api.js');
 app.use(express.static(__dirname + '/public'));
 
 app.set('view engine', 'ejs');
-app.get('*', (req, res, next) => {
+app.get('/', (req, res, next) => {
   res.status(200).render('pages/home.ejs');
 });
 
